@@ -1,0 +1,41 @@
+.footerV1{
+    a{
+        text-decoration: none;
+        color: $black;
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .blockBox{
+        width: 160px;
+        padding-right: 2rem;
+    }
+    .footerInfo{
+        width: calc((74% - 160px)/2);
+        padding: 0 2rem;
+    }
+    .footerSitemap{
+        width: calc((74% - 160px)/2);
+    }
+}
+
+
+/*====================================================
+767.98px以下
+====================================================*/
+@include md{
+    .footerV1{
+        .blockBox{
+            width: initial;
+            padding-right: 0;
+        }
+        .footerInfo{
+            width: initial;
+            padding: 0;
+        }
+        .footerSitemap{
+            width: initial;
+        }
+    }
+}

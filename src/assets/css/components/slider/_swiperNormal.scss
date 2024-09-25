@@ -1,0 +1,21 @@
+.swiperNormal{
+    position: relative;
+    z-index: 0;
+    .swiperBtn{
+        position: absolute;
+        top: calc(50% - 1rem);
+        z-index: 1;
+        &.prev{
+            left: -2rem;
+        }
+        &.next{
+            right: -2rem;
+        }
+    }
+    .swiperPagination{
+        text-align: center;
+        &.swiper-pagination-bullets.swiper-pagination-horizontal{
+            bottom: 0;
+        }
+    }
+}

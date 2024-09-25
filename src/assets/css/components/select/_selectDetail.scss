@@ -1,0 +1,18 @@
+.selectDetail{
+    text-align: right;
+    margin-bottom: 3rem;
+    select{
+        width: 200px;
+        border-radius: 0.25rem;
+        display: inline-block;
+    }
+}
+
+@include sm{
+    .selectDetail{
+        text-align: center;
+        select{
+            width: 100%;
+        }
+    }
+}

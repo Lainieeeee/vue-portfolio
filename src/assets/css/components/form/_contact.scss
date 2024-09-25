@@ -1,0 +1,74 @@
+//全てformスタイル
+%setForm{
+    margin: 0;
+    padding: 8px !important;
+    width: 100%;
+    background: #fff;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1.6rem!important;
+    color: $black;
+    min-height: 44px;
+    border-color: $gray-400;
+    @include fontSan;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+input[type="search"],
+select,
+textarea{
+    @extend %setForm;
+    &::placeholder {
+        color: $gray-400 !important;
+    }
+    &:focus{
+        border-color: $gray-400;
+        color: $black;
+        background-color: #fff;
+        box-shadow: 0 0 2px 2px $gray-200;
+    }
+    &:-webkit-autofill{
+        box-shadow: 0 0 0 1000px #f4fff4 inset;
+        -webkit-text-fill-color: $black !important;
+    }
+}
+
+textarea{
+    &.form-control{
+        min-height: 44px;
+        max-height: 113.6px;
+    }
+}
+
+.twzipcode{
+    .row{
+        select{
+            width: calc((100% - 1rem)/2);
+        }
+        @include md{
+            select{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.form-label{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input{
+    &:checked {
+        background-color: $green;
+        border-color: $green;
+    }
+}

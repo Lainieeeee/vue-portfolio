@@ -1,0 +1,69 @@
+.bootstrapFadeinAnimation{
+    @keyframes fadeInLeftToRight {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes fadeInRightToLeft {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .carousel-caption {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        z-index: 1;
+        color: #fff;
+        opacity: 0;
+        transform: translateX(100%);
+        &.Left{
+            animation: fadeInLeftToRight 1s ease forwards;
+        }
+        &.Right{
+            animation: fadeInRightToLeft 1s ease forwards;
+        }
+        &.Up{
+            animation: fadeInUp 1s ease forwards;
+        }
+        &.Down{
+            animation: fadeInDown 1s ease forwards;
+        }
+    }
+    .carousel-item.active .carousel-caption {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

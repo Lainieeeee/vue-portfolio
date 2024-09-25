@@ -1,0 +1,139 @@
+.headerV5{
+    z-index: 9999;
+    .dropdown-menu {
+        width: 13vw; // 適宜変更すること
+        max-width: 300px;
+        .dropdown-toggle{
+            position: relative;
+            &:after {
+                position: absolute;
+                top: calc(50% - 3px);
+                right: 1rem;
+                transform: rotate(-90deg);
+            }
+        }
+        .nav-link{
+            white-space: normal;
+        }
+        &.ThirdTier,&.FourthTier,&.FifthTier{
+            position: absolute;
+            top: 10px;
+            left: 100%;
+        }
+    }
+    .nav-link{
+        font-size: 1.6rem;
+    }
+}
+
+
+/*====================================================
+991.98px以下
+====================================================*/
+@include lg{
+    .headerV5{
+
+        .dropdown-menu {
+            width: initial;
+            max-width: initial;
+            background-color: initial;
+            border: initial;
+            margin-left: 2em!important;
+            &.ThirdTier,&.FourthTier,&.FifthTier{
+                position: initial;
+                border: none;
+            }
+        }
+        .dropdown-toggle{
+            position: relative;
+            &:after {
+                position: absolute;
+                top: calc(50% - 3px);
+                right: 1rem;
+                transform: rotate(0deg)!important;
+            }
+        }
+
+        .navbar-collapse {
+            max-height: 80vh;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        .navbar-toggler{
+            padding: initial;
+            border: initial;
+            &:focus{
+                outline: initial;
+                box-shadow: initial;
+            }
+            // hamburgerMenu
+            .hamburgerMenu{
+                position: relative;
+                width: 3.1rem;
+                height:3.1rem;
+                span{
+                    display: inline-block;
+                    position: absolute;
+                    background: $black;
+                    left: 0.4rem;
+                    width: 2.4rem;
+                    height: 0.3rem;
+                    transition: all .4s;
+                    &:nth-of-type(1) {
+                        top:0.4rem;	
+                    }
+                    &:nth-of-type(2) {
+                        top:1.4rem;
+                    }
+                    &:nth-of-type(3) {
+                        top:2.4rem;
+                    }
+                }
+                &.active {
+                    span{
+                        &:nth-of-type(1) {
+                            top: 0.8rem;
+                            left: 0.4rem;
+                            transform: translateY(6px) rotate(-45deg);
+                        }
+                        &:nth-of-type(2) {
+                            opacity: 0;
+                        }
+                        &:nth-of-type(3){
+                            top: 2rem;
+                            left: 0.4rem;
+                            transform: translateY(-6px) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/*====================================================
+991.98px以上
+====================================================*/
+@media screen and (min-width: 991.98px){
+    .headerV5{
+
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-toggle{
+            pointer-events: none;
+        }
+
+        .nav-item:hover > .dropdown-menu,
+        .dropdown-menu li:hover > .dropdown-menu {
+            display: block;
+        }
+
+    }
+
+}

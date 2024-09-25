@@ -1,0 +1,51 @@
+.stageStep{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    &:after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-color: $black;
+        width: calc(100% - 140px);
+        height: 1px;
+        top: 2.5rem;
+        left: 70px;
+        z-index: -1;
+    }
+    li{
+        width: calc(100% / 3);
+        .number{
+            border: 1px solid $black;
+            background-color: #fff;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            font-size: 2.6rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .txt{
+            margin-top: 1rem;
+            font-size: 0.9em;
+        }
+        &+li{
+            margin-left: 2rem;
+        }
+        &.active{
+            .number{
+                background-color: $black;
+                color: #fff;
+            }
+        }
+    }
+}

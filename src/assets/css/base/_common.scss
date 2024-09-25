@@ -1,0 +1,83 @@
+/*====================================================
+初期設定
+====================================================*/
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+html {
+  font-size: 62.5%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  @include fontSan;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $black;
+  font-weight: 400;
+  background-color: $ivory-light;
+  // &.ja{
+  //   @include fontSanJa;
+  // }
+}
+.jp{
+  @include fontSanJa;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+::-moz-selection {
+  background: $orange;
+  color: #fff;
+}
+::selection {
+  background: $orange;
+  color: #fff;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+ol,ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*====================================================
+ページリンクサイズを調整
+====================================================*/
+.page-item{
+  padding: 0.5rem;
+  .page-link{
+      font-size: 1.6rem;
+      border: 1px solid $black;
+      border-radius: 50%!important;
+      width: 3.4rem;
+      height: 3.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $black;
+      &:hover{
+          background-color: $orange;
+      }
+  }
+  &.disabled{
+      opacity: 0.4;
+      .page-link{
+          border: 1px solid $black;
+          background-color: #fff;
+      }
+  }
+  &.active{
+      .page-link{
+          background-color: $black;
+          color: #fff;
+      }
+  }
+}

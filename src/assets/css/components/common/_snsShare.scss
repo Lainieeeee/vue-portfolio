@@ -1,0 +1,104 @@
+.snsShare{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 998;
+    .menu{
+        cursor: pointer;
+        .X{
+            display: none;
+            width: 30px;
+            height: auto;
+        }
+        .O{
+            display: block;
+            width: 50px;
+            height: auto;
+        }
+    }
+    .icon{
+        .tel,.line,.fb {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: -1;
+            transition: 0.4s cubic-bezier(0.935, 0, 0.34, 1.33);
+            opacity: 0;
+            img{
+                width: 50px;
+                height: auto;
+            }
+        }
+    }
+    &.open{
+        .menu {
+            .O{
+                display: none;
+            }
+            .X{
+                display: block;
+                position: fixed;
+                bottom: 90px;
+                right: 30px;
+            }
+        }
+        .icon{
+            .tel,.line,.fb{
+                opacity: 1;
+            }
+            .tel{
+                bottom: 260px;
+                transition-delay: 0.1s;
+            }
+            .line{
+                bottom: 200px;
+                transition-delay: 0.2s;
+            }
+            .fb{
+                bottom: 140px;
+                transition-delay: 0.3s;
+            }
+        }
+    }
+}
+
+
+/*====================================================
+767.98px以下
+====================================================*/
+@include md{
+    .snsShare{
+        .menu{
+            .O,.X {
+                width: 40px;
+            }
+        }
+        .icon{
+            .tel,.line,.fb {
+                img{
+                    width: 40px;
+                    height: auto;
+                }
+            }
+        }
+        &.open{
+            .menu{
+                .X {
+                    right: 20px;
+                    bottom: 80px;
+                }
+            }
+            .icon{
+                .tel {
+                    bottom: 230px;
+                }
+                .line {
+                    bottom: 180px;
+                }
+                .fb {
+                    bottom: 130px;
+                }
+            }
+        }
+    }
+}

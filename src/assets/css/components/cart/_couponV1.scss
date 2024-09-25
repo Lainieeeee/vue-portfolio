@@ -1,0 +1,24 @@
+.couponV1{
+    .couponPrice{
+        font-size: 4rem;
+        span{
+            font-size: 6rem;
+        }
+        @include md{
+            font-size: 2.6rem;
+            span{
+                font-size: 4rem;
+            }
+        }
+    }
+    .deleteButton{
+        top: -1rem;
+        right: -1rem;
+        cursor: pointer;
+        i{
+            background-color: #fff;
+            border-radius: 50%;
+            font-size: 3rem;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+header{
+    z-index: 9999;
+    .nav-link{
+        color: $orange;
+        &.active{
+            color: $orange!important;
+        }
+        &:hover,&:focus{
+            background-color: initial;
+            color: $orange!important;
+        }
+        &.active,&:hover{
+            position: relative;
+            transition: 0.3s;
+            &:after{
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: $orange;
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 50%;
+                bottom: -0.2rem;
+                left: 50%;
+            }
+        }
+    }
+    @include lg {
+        .nav-item{
+            width: 100%;
+            text-align: center;
+        }
+        .navbar-toggler{
+            padding: initial;
+            border: initial;
+            &:focus{
+                outline: initial;
+                box-shadow: initial;
+            }
+            // hamburgerMenu
+            .hamburgerMenu{
+                position: relative;
+                width: 3.1rem;
+                height:3.1rem;
+                span{
+                    display: inline-block;
+                    position: absolute;
+                    background: $orange;
+                    left: 0.4rem;
+                    width: 2.4rem;
+                    height: 0.3rem;
+                    transition: all .4s;
+                    &:nth-of-type(1) {
+                        top:0.4rem;	
+                    }
+                    &:nth-of-type(2) {
+                        top:1.4rem;
+                    }
+                    &:nth-of-type(3) {
+                        top:2.4rem;
+                    }
+                }
+                &.active {
+                    span{
+                        &:nth-of-type(1) {
+                            top: 0.8rem;
+                            left: 0.4rem;
+                            transform: translateY(6px) rotate(-45deg);
+                        }
+                        &:nth-of-type(2) {
+                            opacity: 0;
+                        }
+                        &:nth-of-type(3){
+                            top: 2rem;
+                            left: 0.4rem;
+                            transform: translateY(-6px) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.searchText{
+    width: 0px!important;
+    opacity: 0;
+    transition: all 0s ease 0s;
+    &.open{
+        width: 300px!important;
+        opacity: 1;
+        transition: all 0.3s ease 0s;
+    }
+}
+.searchBtn{
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    .fa-xmark{
+        display: none;
+    }
+    &.open {
+        .fa-magnifying-glass{
+            display: none;
+        }
+        .fa-xmark{
+            display: block;
+        }
+    }
+}

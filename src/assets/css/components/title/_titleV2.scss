@@ -1,0 +1,32 @@
+.titleV2 {
+    margin-bottom: 4rem;
+    position: relative;
+    *{
+        font-size: 4rem;
+    }
+    @include md{
+        *{
+            font-size: 2.6rem;
+        }
+    }
+    &:before,&:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-image: linear-gradient($success 0 100%), linear-gradient($success 0 100%);
+        background-repeat: no-repeat;
+        background-size: 3rem 2px, 2px 3rem;
+        background-position: left top 5px, left 5px top;
+        width: 3rem;
+        height: 3rem;
+    }
+    &:before {
+        top: -1.5rem;
+        left: -1.5rem;
+    }
+    &:after {
+        bottom: -1.5rem;
+        right: -1.5rem;
+        transform: rotate(-180deg);
+    }
+}

@@ -1,0 +1,30 @@
+[class^="googleMap"] {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 26%;
+    iframe {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+.googleMapSquare{
+    padding-bottom: 20%;
+}
+.googleMapOblong{
+    padding-bottom: 30%;
+    min-width: 260px;
+    min-height: 320px;
+}
+
+/*====================================================
+767.98px以下
+====================================================*/
+@include md{
+    [class^="googleMap"] {
+        width: 100%;
+        padding-bottom: 70%;
+    }
+}

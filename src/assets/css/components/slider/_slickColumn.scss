@@ -1,0 +1,19 @@
+.slickColumn{
+    position: relative;
+    z-index: 0;
+    .slick-slide{
+        padding: 0 3px;
+    }
+    .arrowBtn{
+        position: absolute;
+        top: calc(50% - 1rem);
+        z-index: 1;
+        cursor: pointer;
+        &.prev{
+            left: -1.5rem;
+        }
+        &.next{
+            right: -1.5rem;
+        }
+    }
+}

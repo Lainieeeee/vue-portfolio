@@ -1,0 +1,11 @@
+.mouseDragScroll{
+    overflow-x: scroll;
+    scrollbar-width: none;
+    cursor: grab;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.scrollArrow{
+    cursor: pointer;
+}

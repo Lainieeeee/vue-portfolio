@@ -1,0 +1,20 @@
+.spinnerBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $secondary;
+    width: 200px;
+    span{
+        padding: 0.5rem 1rem;
+        &.sub,&.add{
+            cursor: pointer;
+            background-color: $gray-200;
+        }
+        &.sub{
+            border-right: 1px solid $secondary;
+        }
+        &.add{
+            border-left: 1px solid $secondary;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.accordion-button{
+    font-size: 1.6rem;
+    &:focus {
+        box-shadow: initial;
+    }
+    &:not(.collapsed) {
+        color: white;
+        background-color: $green;
+        box-shadow: initial;
+    }
+}

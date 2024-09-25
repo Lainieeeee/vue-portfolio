@@ -1,0 +1,68 @@
+.ExpertiseList{
+    .ExpertiseItem {
+        width: calc((100% - 8rem)/4);
+        margin: 1rem;
+        position: relative;
+        top: 0;
+        transition: 0.7s;
+        &:hover{
+            top: -2rem;
+            &:after{
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: $black;
+                width: 80%;
+                height: 0.4rem;
+                bottom: -2rem;
+                border-radius: 50%;
+                left: 10%;
+                opacity: 20%;
+            }
+        }
+        @include lg{
+            width: calc((100% - 4rem)/2);
+        }
+        @include md{
+            position: inherit;
+            &:hover{
+                &::after{
+                    display: none;
+                    position: inherit;
+                }
+            }
+        }
+        @include sm{
+            width: 100%;
+            margin: 1rem 0;
+        }
+        dl {
+            dd{
+                p{
+                    position: relative;
+                    padding-left: 2rem;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        display: inline-block;
+                        background-color: $orange;
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        top: 9px;
+                        left: 0;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.indexExperienceBox{
+    dl{
+        &+dl{
+            border-top: 1px dashed $orange;
+        }
+    }
+}

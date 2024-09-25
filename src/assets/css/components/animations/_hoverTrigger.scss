@@ -1,0 +1,11 @@
+.hoverTrigger{
+    cursor: pointer;
+}
+.changeList{
+    &>div {
+        display: none;
+        &.initial {
+            display: block;
+        }
+    }
+}

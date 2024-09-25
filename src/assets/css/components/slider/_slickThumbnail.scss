@@ -1,0 +1,24 @@
+.slickThumbnail{
+    .thumbnail{
+        .slick-current{
+            .imageTrimmingHorizontal{
+                img{
+                    outline: 3cap solid $green;
+                    outline-offset: -3px;
+                }
+            }
+        }
+    }
+    .arrowBtn{
+        position: absolute;
+        top: calc(50% - 1.5rem);
+        z-index: 1;
+        cursor: pointer;
+        &.prev{
+            left: -2rem;
+        }
+        &.next{
+            right: -2rem;
+        }
+    }
+}

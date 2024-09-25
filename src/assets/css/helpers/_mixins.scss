@@ -1,0 +1,44 @@
+/*====================================================
+font
+====================================================*/
+@mixin fontSan {
+    font-family: "Work Sans","Noto Sans TC", sans-serif;
+}
+@mixin fontSanJa {
+    font-family: "Work Sans","Noto Sans JP", sans-serif;
+}
+
+
+
+
+/*====================================================
+Breakpoints
+====================================================*/
+@mixin xs {
+    @media screen and (max-width: 374.98px) {
+        @content; }
+}
+@mixin sm {
+    @media screen and (max-width: 575.98px) {
+        @content; }
+}
+@mixin md {
+    @media screen and (max-width: 767.98px) {
+        @content; }
+}
+@mixin lg {
+    @media screen and (max-width: 991.98px) {
+        @content; }
+}
+@mixin xl {
+    @media screen and (max-width: 1199.98px) {
+        @content; }
+}
+@mixin xxl {
+    @media screen and (max-width: 1399.98px) {
+        @content; }
+}
+
+/*====================================================
+
+====================================================*/

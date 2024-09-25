@@ -1,0 +1,18 @@
+#svgAnimation{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    #base path {
+        fill:#000; /* 塗りの色 */
+    }
+    #mask path {
+        fill:none; /* 塗りの色 */
+        stroke:#ffffff; /* 線の色 */
+        stroke-width:9px; /* 線幅 */
+        stroke-linecap:round; /* 線端の形状 */
+        stroke-linejoin:round; /* 角の形状 */
+    }
+}

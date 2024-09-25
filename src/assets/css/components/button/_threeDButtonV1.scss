@@ -1,0 +1,30 @@
+.threeDButtonV1{
+    position: relative;
+    display: inline-block;
+    background-color: $success;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    span{
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        transform-style: preserve-3d;
+        transition: rotate .4s;
+        transform-origin: 0 50% -1.5rem;
+        &.hover{
+            rotate: x -90deg;
+        }
+    }
+    &:hover{
+        span{
+            &.normal{
+                rotate: x 90deg;
+            }
+            &.hover{
+                rotate: x 0deg;
+            }
+        }
+    }
+}

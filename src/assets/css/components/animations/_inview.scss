@@ -1,0 +1,176 @@
+/*====================================================
+inview
+====================================================*/
+.fadein {
+    opacity: 0;
+    transition: 2s;
+    &.is-show {
+        opacity: 1;
+    }
+}
+.fadeinUp {
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 1s;
+    &.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.fadeinDown {
+    opacity: 0;
+    transform: translate(0, -50%);
+    transition: 1s;
+    &.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.fadeinLeft {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: 1s;
+    &.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.fadeinRight {
+    opacity: 0;
+    transform: translate(50%, 0);
+    transition: 1s;
+    &.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.fadeinLeftSwipe,.fadeinRightSwipe,.fadeinUpSwipe,.fadeinDownSwipe {
+    position: relative;
+    z-index: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 1;
+        transition: transform 1s ease-in-out;
+    }
+}
+.fadeinLeftSwipe,.fadeinRightSwipe{
+    &:before{
+        transform: scaleX(1);
+    }
+}
+.fadeinUpSwipe,.fadeinDownSwipe{
+    &:before {
+        transform: scaleY(1);
+    }
+}
+.fadeinLeftSwipe{
+    &.is-show{
+        &:before{
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+    }
+}
+.fadeinRightSwipe{
+    &.is-show{
+        &:before{
+            right: 0;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+    }
+}
+.fadeinUpSwipe{
+    &.is-show{
+        &:before{
+            left: 0;
+            transform-origin: bottom;
+            transform: scaleY(0);
+        }
+    }
+}
+.fadeinDownSwipe{
+    &.is-show{
+        &:before{
+            left: 0;
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+    }
+}
+
+.slideinLeft,.slideinRight,.slideinBottom,.slideinTop {
+    position: relative;
+    z-index: 0;
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        z-index: 1;
+    }
+}
+.slideinLeft:after {
+    top: 0;
+    right: 0;
+    transition: width 1s;
+}
+.slideinRight:after {
+    top: 0;
+    left: 0;
+    transition: width 1s;
+}
+.slideinBottom:after {
+    top: 0;
+    left: 0;
+    transition: height 1s;
+}
+.slideinTop:after {
+    bottom: 0;
+    left: 0;
+    transition: height 1s;
+}
+.slideinLeft,.slideinRight{
+    &.is-show:after {
+        width: 0;
+    }
+}
+.slideinBottom,.slideinTop{
+    &.is-show:after  {
+        height: 0;
+    }
+}
+
+
+/*====================================================
+767.98px以下
+====================================================*/
+// @include md{
+//     .fadein,.fadeinUp,.fadeinDown,.fadeinLeft,.fadeinRight {
+//         opacity: 1;
+//         transition: inherit;
+//         transform: inherit;
+//     }
+//     .fadeinLeftSwipe,.fadeinRightSwipe,.fadeinUpSwipe,.fadeinDownSwipe{
+//         position: inherit;
+//         &:before{
+//             transform: inherit;
+//             display: none;
+//         }
+//         &.is-show{
+//             &:before{
+//                 transform-origin: initial;
+//                 transform: inherit;
+//             }
+//         }
+//     }
+    
+// }

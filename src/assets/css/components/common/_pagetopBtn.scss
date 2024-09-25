@@ -1,0 +1,26 @@
+.pagetopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;//一開始不要顯示(高度超過1280px，則淡入顯示)
+    z-index: 2;
+    a{
+        img{
+            width: 50px;
+        }
+    }
+}
+
+
+/*====================================================
+767.98px以下
+====================================================*/
+@include md{
+    .pagetopBtn {
+        a{
+            img{
+                width: 40px;
+            }
+        }
+    }
+}

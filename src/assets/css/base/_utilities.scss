@@ -1,0 +1,50 @@
+/*====================================================
+文字切り詰め
+====================================================*/
+%line-clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+// 1行
+.firstLine{
+    @extend %line-clamp;
+    -webkit-line-clamp: 1;
+}
+// 2行
+.twoLine{
+    @extend %line-clamp;
+    -webkit-line-clamp: 2;
+}
+// 3行
+.threeLine{
+    @extend %line-clamp;
+    -webkit-line-clamp: 3;
+}
+
+/*====================================================
+コンテンツ幅調整
+====================================================*/
+.detailInner{
+    padding: 10rem 2rem;
+}
+// 767.98px以下
+@include md{
+    .detailInner{
+        padding: 5rem 2rem;
+    }
+}
+
+/*====================================================
+リンクサイズを調整
+====================================================*/
+.nav-link{
+    font-size: 1.6rem;
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
+    transition: 0.3s;
+    &:hover,&.show{
+        background-color: $black;
+        color: #fff!important;
+    }
+}

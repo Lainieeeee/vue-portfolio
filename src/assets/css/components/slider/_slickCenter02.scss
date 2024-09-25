@@ -1,0 +1,33 @@
+.slickCenter02{
+    position: relative;
+    z-index: 0;
+    padding: 0 20px;
+    .slick-slide{
+        padding: 0 10px;
+    }
+    .arrowBtn{
+        position: absolute;
+        top: calc(50% - 3rem);
+        z-index: 1;
+        cursor: pointer;
+        &.prev{
+            left: 0;
+        }
+        &.next{
+            right: 0;
+        }
+    }
+}
+
+
+/*====================================================
+767.98px以下
+====================================================*/
+@include md{
+    .slickCenter02{
+        padding: 0 10px;
+        .slick-slide{
+            padding: 0 10px;
+        }
+    }
+}

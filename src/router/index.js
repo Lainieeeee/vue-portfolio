@@ -29,7 +29,7 @@ const routes = [
 
 const router = createRouter({
   // history: createWebHistory(process.env.BASE_URL),
-  history: createWebHashHistory('/vue-portfolio/'), // ハッシュモードに変更
+  history: createWebHistory('/vue-portfolio/'),
   routes,
 
   // アンカーリンク機能追加

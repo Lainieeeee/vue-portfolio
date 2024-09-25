@@ -125,7 +125,8 @@ const prevPage = () => {
 };
 
 onMounted(async () => {
-    const response = await fetch('/data/projects-jp.json'); // JSONファイルを取得
+    // const response = await fetch('/data/projects-jp.json'); // JSONファイルを取得
+    const response = await fetch('/vue-portfolio/data/projects-jp.json'); // JSONファイルを取得
     const data = await response.json(); // JSONをパース
     products.value = data; // データを設定
     Fancybox.bind('[data-fancybox]'); // Fancyboxを初期化

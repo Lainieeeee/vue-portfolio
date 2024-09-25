@@ -64,7 +64,8 @@ setup() {
   // JSONファイルからデータを取得
   const fetchProjectsData = async () => {
     try {
-      const response = await fetch('/data/projects.json');
+      // const response = await fetch('/data/projects.json');
+      const response = await fetch('/vue-portfolio/data/projects.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

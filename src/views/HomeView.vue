@@ -198,11 +198,11 @@
                         <p class="mb-2">使用jQuery實現互動效果的經驗</p>
                         <p>使用Vite進行快速高效率的網站開發</p>
 
-                        
-                        <p>使用 Vue CLI 進行專案啟動的知識</p>
-                        <p>透過 Vue Router 實現無縫的導航</p>
-                        <p>Vue 組件的設計與實作</p>
-                        <p>利用 Composition API 進行開發</p>
+
+                        <p>使用 Vue CLI 建立和管理專案</p>
+                        <p>使用 Vue Router 實現SPA（單頁式應用）</p>
+                        <p>創建考慮可重用性的 Vue 元件</p>
+                        <p>使用 Vue Composition API 設計與開發現代網站</p>
                     </dd>
                 </dl>
             </div>

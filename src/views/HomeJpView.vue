@@ -199,10 +199,10 @@
                         <p>Viteを使用した高速で効率的なWeb開発</p>
 
                         
-                        <p>Vue CLIを使用したプロジェクト立ち上げの知識</p>
-                        <p>Vue Routerによるシームレスなナビゲーション実装</p>
-                        <p>Vueコンポーネントの設計と実装</p>
-                        <p>Composition APIを利用した開発</p>
+                        <p>Vue CLIを使用したプロジェクトの立ち上げおよび管理</p>
+                        <p>Vue Routerを用いたシームレスなSPA設計</p>
+                        <p>再利用性を考慮したVueコンポーネントの作成</p>
+                        <p>Vue Composition APIを用いたモダンサイト設計・開発</p>
                     </dd>
                 </dl>
             </div>
